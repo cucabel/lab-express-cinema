@@ -16,7 +16,7 @@ const debug = require('debug')(
 
 const app = express();
 
-// require database configuration
+// require database configuration | db.config console logs the db name | www console logs the port is listening on
 require('./configs/db.config');
 
 // Middleware Setup
@@ -39,3 +39,7 @@ const index = require('./routes/index');
 app.use('/', index);
 
 module.exports = app;
+
+/*
+"dev-windows": "nodemon -e '*' ./bin/www"
+*/
